@@ -305,7 +305,7 @@ app.post('/contact_api', async (req, res) => {
   }
 });
 
-const PORT = process.env.PORTS;
+const PORT = 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });
