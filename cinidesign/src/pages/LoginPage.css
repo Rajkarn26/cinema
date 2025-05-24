@@ -1,0 +1,147 @@
+.main {
+  position: relative;
+  min-height: 100vh;
+  z-index: 1;
+  overflow: hidden;
+}
+
+.main::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('../assests/blue.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  filter: blur(10px);
+  z-index: -1 ;
+}
+
+.maintwo 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; 
+  height: 100vh;
+}
+
+.mainform {
+  width: 350px;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+}
+
+.inputs 
+{
+  padding: 5px 20px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  background-color: transparent;
+  font-size: 16px;
+  width: 100%;
+  box-sizing: border-box;
+  transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+    
+.inputs:focus 
+{
+  border-color: rgb(0, 59, 59);
+  outline: none;
+  box-shadow: rgb(0, 204, 255);
+}
+
+.buttons {
+  background: linear-gradient(169deg, #27496d 0%, #00a8cc 50%, #0096c7 100%);
+  color: #ffffff;
+  padding: 10px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  font-weight: 500;
+}
+
+.buttons:hover {
+  background: linear-gradient(169deg, #142850 0%, #27496d 50%, #00a8cc 100%);
+  box-shadow: 0 6px 16px rgba(0, 168, 204, 0.3);
+}
+
+.buttons:active {
+  background: linear-gradient(169deg, #0d1b2a 0%, #1b263b 50%, #415a77 100%);
+  box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+
+.small
+{
+  color: #142850;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.labels
+{
+  color: rgb(255, 249, 249);
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.image-wrapper 
+{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+  
+.centered-img
+{
+  max-width: 300px; 
+  height: auto;
+  border-radius: 12px;
+}
+
+.password-wrapper {
+  position: relative;
+}
+
+.password-wrapper .password-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  color: #888;
+  font-size: 18px;
+}
+
+.inputs 
+{
+  padding-right: 35px; 
+}
+
+.text-danger 
+{
+  margin-top: 5px;
+  color: #0d1b2a;
+}
+
+.inputss {
+  color: #030303; /* or #e74c3c for a deep red */
+  font-size: 14px;
+  font-weight: 500;
+  margin-top: 4px;
+}
+
+
+
+
+

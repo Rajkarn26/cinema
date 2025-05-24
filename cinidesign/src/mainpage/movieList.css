@@ -1,0 +1,240 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-image: url('../assests/blue.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.main-container {
+  backdrop-filter: blur(6px);
+  min-height: 100vh;
+  padding: 20px;
+  color: white;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 10px;
+  align-items: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 15px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+
+.header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.search-box {
+  padding: 10px;
+  width: 100%;
+  max-width: 300px;
+  border-radius: 5px;
+  border: none;
+  font-size: 1rem;
+  flex: 1;
+}
+
+.back-btn {
+  background: #00bcd4; /* Aqua base color */
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  box-shadow: 0 4px 10px rgba(0, 188, 212, 0.3);
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #00e5ff; /* Lighter aqua on hover */
+  box-shadow: 0 6px 20px rgba(0, 229, 255, 0.6);
+  transform: translateY(-2px);
+}
+
+
+.movies-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.movie-card {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid transparent;
+  border-radius: 15px;
+  overflow: hidden;
+  width: 300px;
+  transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  backdrop-filter: blur(4px);
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+  border-image: linear-gradient(45deg, #ff4081, #81d4fa) 1;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.movie-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+.card-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.btn-delete,
+.btn-edit {
+  padding: 8px 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+/* Delete - Styled with Ice Blue and Black Contrast */
+.btn-delete {
+  background: #d0f0ff; /* ice blue */
+  color: #1e1e1e; /* near-black text */
+  border: 1px solid #b0eaff;
+}
+
+.btn-delete:hover {
+  background: #a8eaff; /* aqua tint */
+  box-shadow: 0 4px 12px rgba(160, 230, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Edit - Styled with Sky Blue and White */
+.btn-edit {
+  background: #87cefa; /* sky blue */
+  color: #ffffff;
+  border: 1px solid #70b7e3;
+}
+
+.btn-edit:hover {
+  background: #5fc6ff; /* aqua sky */
+  box-shadow: 0 4px 12px rgba(135, 206, 250, 0.4);
+  transform: translateY(-2px);
+}
+
+
+.edit-form-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.edit-form {
+  background: rgba(11, 218, 255, 0.685);
+  padding: 30px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 400px;
+  color: #333;
+}
+
+.edit-form input,
+.edit-form textarea {
+  width: 100%;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.form-buttons button {
+  padding: 10px 18px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Primary-style button (e.g., Submit) */
+.form-buttons .btn-primary {
+  background: #5fd1ff; /* soft aqua */
+  color: #fff;
+  border: 1px solid #aef0ff;
+}
+
+.form-buttons .btn-primary:hover {
+  background: #47c4f5;
+  box-shadow: 0 6px 14px rgba(95, 209, 255, 0.5);
+  transform: translateY(-2px);
+}
+
+/* Secondary-style button (e.g., Cancel or Back) */
+.form-buttons .btn-secondary {
+  background: #f0faff; /* ice blue */
+  color: #1a1a1a;
+  border: 1px solid #cdefff;
+}
+
+.form-buttons .btn-secondary:hover {
+  background: #e1f7ff;
+  box-shadow: 0 6px 14px rgba(173, 234, 255, 0.4);
+  transform: translateY(-2px);
+}
+
+
+/* 🌐 Responsive */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .movie-card {
+    width: 90%;
+  }
+
+  .search-box {
+    width: 100%;
+  }
+
+  .back-btn {
+    width: 100%;
+    text-align: center;
+  }
+}
