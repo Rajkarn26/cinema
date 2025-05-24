@@ -18,14 +18,14 @@ function MovieList() {
   }, []);
 
   const fetchMovies = async () => {
-    const res = await fetch('http://localhost:5000/get_all_movies_api');
+    const res = await fetch('https://endcini.onrender.com/get_all_movies_api');
     const data = await res.json();
     setMovies(data);
   };
 
   const deleteMovie = async (id) => {
     if (window.confirm('Are you sure you want to delete this movie?')) {
-      await fetch(`http://localhost:5000/delete_movie_api/${id}`, {
+      await fetch(`https://endcini.onrender.com/delete_movie_api/${id}`, {
         method: 'DELETE',
       });
       fetchMovies();
@@ -53,7 +53,7 @@ function MovieList() {
     formData.append('description', updatedMovie.description);
     if (updatedMovie.imageUrl) formData.append('image', updatedMovie.imageUrl);
 
-    const res = await fetch(`http://localhost:5000/update_movie_api/${id}`, {
+    const res = await fetch(`https://endcini.onrender.com/update_movie_api/${id}`, {
       method: 'PUT',
       body: formData,
     });
@@ -92,7 +92,7 @@ function MovieList() {
           filteredMovies.map((movie) => (
             <div className="movie-card" key={movie._id}>
               <img
-                src={`http://localhost:5000${movie.imageUrl}`}
+                src={`https://endcini.onrender.com${movie.imageUrl}`}
                 alt={movie.movieName}
                 className="movie-img"
               />

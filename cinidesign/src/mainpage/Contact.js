@@ -34,7 +34,7 @@ const Contact = () => {
     }
 
     try {
-      await axios.post('http://localhost:5000/contact_api', formData);
+      await axios.post('https://endcini.onrender.com/contact_api', formData);
       setResponseMessage('✅ Message sent successfully!');
       setResponseType('success');
       setFormData({ name: '', email: '', message: '' });

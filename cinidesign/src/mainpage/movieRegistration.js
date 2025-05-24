@@ -50,7 +50,7 @@ function MovieRegistration() {
       }
 
       try {
-        const res = await fetch('http://localhost:5000/movie_register_api', {
+        const res = await fetch('https://endcini.onrender.com/movie_register_api', {
           method: 'POST',
           body: form,
         });

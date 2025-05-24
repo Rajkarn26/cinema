@@ -31,7 +31,7 @@ const LoginPage = () => {
     e.preventDefault();
     if (validate()) {
       try {
-        const response = await fetch('http://localhost:5000/login_api', {
+        const response = await fetch('https://endcini.onrender.com/login_api', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username, password }),

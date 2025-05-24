@@ -30,7 +30,7 @@ const ForgetPasswordPage = () => {
     e.preventDefault();
     if (validate()) {
       try {
-        const response = await fetch('http://localhost:5000/forgot_password_api', {
+        const response = await fetch('https://endcini.onrender.com/forgot_password_api', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username, newPassword: password }),

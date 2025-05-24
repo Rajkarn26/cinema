@@ -43,7 +43,7 @@ const RegisterPage = () => {
     e.preventDefault();
     if (validate()) {
       try {
-        const response = await fetch('http://localhost:5000/register_api', {
+        const response = await fetch('https://endcini.onrender.com/register_api', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ username, email, password }),
