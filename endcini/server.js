@@ -15,8 +15,16 @@ dotenv.config();
 
 const app = express();
 
-app.use(cors());
-app.use(bodyParser.json());
+// app.use(cors());
+// app.use(bodyParser.json());
+
+const FRONTEND_URL = process.env.APPLICATION_URL;
+
+const cors = require('cors');
+app.use(cors({
+  origin: process.env.APPLICATION_URL,
+  credentials: true,
+}));
 
 if(!fs.existsSync(uploadDir)) 
 {
